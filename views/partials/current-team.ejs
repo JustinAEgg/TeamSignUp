@@ -1,0 +1,8 @@
+<p class="current-team">
+    Your Team:
+    <% if (yourTeam===null) { %>
+        No team assigned
+    <% } else { %>
+        <a class="team" href="/team/<%= yourTeam %>">Team <%= yourTeam %></a>
+    <% } %>
+</p>

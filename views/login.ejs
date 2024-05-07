@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/doc-head.ejs", {title: "Student Login"}); %>
+<body>
+
+<section class="header">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><img src="/images/LOGO.png" width="200" height="85"></a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/login">LOG IN</a></li>
+                <!--<li><a href="/register">REGISTER</a></li>-->
+            </ul>
+        </div>
+    </nav>
+</section>
+    
+<main>
+    <h1>Login</h1>
+    <form method="post", action="/login">
+        <label for="email">Email: </label><input type="text" name="email" /><br>
+        <label for="password">Password: </label><input type="password" name="password" /><br>
+        <input type="submit" value="Submit">
+    </form>
+   
+
+</body>
+</html>

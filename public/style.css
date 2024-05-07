@@ -1,0 +1,1706 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.utd-mall {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(121,121,121,0.2) 0%, rgba(117,117,117,0.2) 35%, rgba(51,51,51,0.2) 100%), url(images/UTD-Mall-1920.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 5%;
+    justify-content:space-between;
+    background-color: #f26c4f;
+}
+
+.nav-links{
+    display: flex;
+    text-align: right;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links.active {
+    text-decoration: underline;
+    color: #247730;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0.25em 1em;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+.nav-links ul li button {
+    color: #fff;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    background-color: inherit; 
+    border: none;     
+    cursor: pointer;         
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: #247730;
+    display: block;
+    padding-bottom: 5px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.index-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-logo-box {
+    position: absolute;
+    top: 20%;
+}
+
+.setting-links li{
+    display: inline;
+    flex: 1;
+    text-align: left;
+}
+
+body{
+    background-color: #ebebeb;
+}
+
+main {
+    background-color: #ebebeb;
+    width: 98%;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    top: 10px;
+}
+
+/* Profile.ejs */
+
+.profile-page {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-left-column, .profile-right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-page h1{
+    padding: 10px;
+}
+
+.profile-card{
+    width: 400px;
+    display: inline-block;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+  }
+
+  .profile-page .project-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+  .personal-info-card{
+    width: 400px;
+    display: inline-block;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .personal-info-card h1{
+        text-align: left;
+  }
+
+  .personal-info-card h2{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+  .profile-card h1{
+    font-weight: 500;
+    color: #000;
+  }
+
+  .profile-card img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+
+  .resume-setting-link{
+    text-align: center;
+    margin-top: 15px;
+  }
+
+.image-link>label{
+    display: block;
+    width: 200px;
+    background: linear-gradient(90deg, #f26c4f 0%, #e26246 100%);
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-picture{
+    display: none;
+}
+
+.setting-links a{
+    display: inline-block;        
+    padding: 10px;
+    width: 320px;
+    height: 15px;	
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;	
+    background: linear-gradient(90deg, #f26c4f 0%, #e26246 100%);
+    color:#fff;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;    
+    margin-block: 5px;
+}
+
+.resume-card{
+    display: inline-block;
+    vertical-align: top;
+    width: 475px;
+    height: 300px;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.resume-card h1 {
+    text-align: left;
+    margin-left: 37px;
+    margin-top: 20px;
+}
+
+.resume-card h2 {
+    text-align: left;
+    margin-left: 50px;
+    font-size: 1.1em;
+    color: rgb(92, 92, 92);
+}
+
+.resume-info{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.myinfo-card{
+    display: inline-block;
+    vertical-align: top;
+    width: 750px;
+    height: 300px;
+    border-radius: 10px;
+    background: #fff;
+    margin: 10px;
+    margin-left: 50px;
+    font-size: 1.5em;
+}
+
+.myinfo-project {
+    margin-bottom: 25px;
+}
+
+.myinfo-card h1{
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 30px;
+}
+
+.projectSkillsList {
+    margin-bottom: -100px;
+}
+
+.myinfo-project h1{
+    color: rgb(92, 92, 92);
+    padding-top: 10px;
+    font-size: 1.1em;
+    margin-top: -10px;
+}
+
+.myinfo-team{
+    margin-bottom: 25px;
+}
+
+.myinfo-team h1{
+    color: rgb(92, 92, 92);
+    padding-top: 10px;
+    font-size: 1.1em;
+    margin-top: -10px;
+}
+
+.myinfo-team h3{
+    font-weight: normal;
+}
+
+.myinfo-project h3{
+    font-weight: normal;
+}
+
+.project-card{
+    display: inline-block;
+    vertical-align: top;
+    width: 750px;
+    height: calc(auto + 100px);  
+    border-radius: 10px;
+    background: #fff;
+    margin: 10px;
+    text-align: center;
+    margin-left: 50px;
+    font-size: 1.5em;
+}
+
+.leaveTeamButtonContainer {
+    margin-left: -14px;
+    margin-top: 10px;
+}
+
+.project-skills {
+    margin-bottom: 50px;
+}
+
+.project-skills h1{
+    color: rgb(92, 92, 92);
+    padding-top: 10px;
+    font-size: 1.2em;
+}
+
+.profile-skills {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.project-card h1{
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 30px;
+}
+
+.project-card h3{
+    margin-left: -5px;
+}
+
+.add-skill{
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    scale: 120%;
+}
+
+.skill-bubble {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 3px 5px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.skill-bubble:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.add-skill-newproj {
+    margin-top: 60px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    scale: 100%;
+}
+
+.remove-skill-newproj {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    scale: 100%;
+}
+
+.remove-skill{
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    scale: 120%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.setting-links a:hover{
+    background: linear-gradient(180deg, #ef694b 0%, #dc5132 100%);
+}
+
+.user-page h1{
+    padding: 10px;
+}
+
+.userInfo{
+    padding: 20px;
+}
+
+.user-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-col{
+    align-items: center;
+    margin-right: 30px;
+}
+
+.user-col p{
+    padding:10px;
+}
+
+.user-row h3{
+    text-align: center;
+    padding: 20px;
+}
+
+.user-row p{
+    display: flex;
+}
+
+.invite-link{
+    padding:10px;
+}
+
+.projects{
+    padding: 10px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.projects h3{
+    color: rgb(92, 92, 92);
+    padding-top: 10px;
+}
+
+.projects-pref-list {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.add-info{
+    padding: 10px;
+}
+.add-info p{
+    padding: 10px;
+}
+
+.add-info h3{
+    padding-top: 5px;
+    font-size: 1.4em;
+}
+
+.add-info h4{
+    padding-top: 15px;
+    color: rgb(92, 92, 92);
+}
+
+
+.your-project-indicator {
+    font-size: 0.5em;
+}
+
+.project-sponsor {
+    font-weight: bold;
+    line-height: 1.8em;
+}
+
+.your-team-indicator {
+    font-size: 0.5em;
+}
+
+.student-list {
+    text-align: left;
+    background-color: #ebebeb;
+    padding: 1em;
+    list-style-type: none;
+    line-height: 1.8em;
+}
+
+.profile-list h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.profile-list {
+    text-align: left;
+    background-color: #ebebeb;
+    padding: 1em;
+    list-style-type: none;
+    line-height: 1.8em;
+}
+
+.profile-list h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.profile-project-interest {
+    font-size: 1.3rem;
+    margin-bottom: 0.5em;
+}
+
+.project-description {
+    margin-top: -0.3em;
+}
+
+.project-sponsor {
+    font-size: 1.3rem;
+    margin-bottom: 0.001em;
+}
+.student-project-preferences {
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.student-skills {
+    font-size: 1.1rem;
+}
+
+.profile-list > li > a,
+.profile-list > li > div {
+    padding: 1em;
+    border-bottom: 1pt solid #333;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.profile-image-box {
+    height: 12rem;
+    width: 12rem;
+    margin-right: 2em;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.profile-item{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-box {
+    min-height: 12rem;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-status-box {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+.project-status-box {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+.profile-list > li > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.inline-list > ul {
+    list-style-type: none;
+    display: inline;
+}
+
+.inline-list > ul > li {
+    display: inline;
+}
+
+.projectPageStatus {
+    text-align: left;
+    margin-left: 17px;
+    margin-top: 12px;
+}
+
+.project-page-skills {
+    margin-bottom: 20px;
+}
+
+.project-page-skills h1{
+    margin-bottom: 10px;    
+}
+
+.inline-list > ul > li:last-child:after {
+    content: "";
+}
+
+.team-status-open {
+    color: green;
+}
+
+.project-status-open {
+    color: green;
+}
+
+.team-status-closed {
+    color: red;
+}
+
+.project-status-closed {
+    color: red;
+}
+
+.invite-message {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.function-container {
+    background-color: #ffffff;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    display: flex;
+    align-items: center;    
+}
+
+.function-item {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.your-project {
+    color: #333;
+    margin-top: 5px;
+    margin-left: 8px;
+    justify-content: right;
+    font-size: 1.1em;
+}
+
+.your-team {
+    color: #333;
+    margin-top: 5px;
+    margin-left: 8px;
+    justify-content: right;
+    font-size: 1.1em;
+}
+
+.inviteLinks{
+    display: flex;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+.inviteInboxLink {
+    color: #333;
+    margin-top: 5px;
+    margin-left: 8px;
+    justify-content: right;
+    font-size: 1.1em;
+}
+
+.newInviteLink {
+    color: #333;
+    margin-top: 5px;
+    margin-left: 8px;
+    justify-content: right;
+    font-size: 1.1em;
+}
+
+.your-team a {
+    color: #007bff;
+}
+
+.your-project a {
+    color: #007bff;
+}
+
+#searchInput {
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+#searchInput:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#skills {
+    width: 170px;
+    height: 30px;
+    background-image: url(/images/skills_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: scale(1.1);
+    padding-left: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+#skills:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.user-pic {
+    width: 50px;
+    border-radius: 50%;        
+    cursor: pointer;
+}
+
+.user-pic-item{    
+    list-style: none;
+}
+
+.sub-menu-wrap{
+    position: absolute;
+    top: calc(100% + -10px);
+    right: 0.5%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 9999;
+}
+
+.sub-menu-wrap.open-menu{
+    max-height: 500px;
+}
+
+.sub-menu{
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 2px 5px rgba(0.2, 0.2, 0.2, 0.2);
+    padding: 10px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+
+.sub-menu-link p{
+    width: 100%;
+    color: #525252;
+    scale: 125%;
+    margin-right: 35px;
+}
+
+.user-info{
+    display:flex;
+    align-items: center;
+}
+
+.user-info h3{
+    font-weight: 500;
+}
+
+.user-info img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+.sub-menu-link img{
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+
+.sub-menu-link span{
+    font-size: 22px;
+    transition: transform 0.5s;
+    color: #525252;
+    margin-right: 5px;
+}
+
+.sub-menu-link:hover span{
+    transform: translateX(5px);
+}
+
+.sub-menu-link:hover p{
+    font-weight: 600;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3{
+    font-weight: 500;
+}
+
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+}
+
+.user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu-wrap::before {
+    content: '';
+    position: absolute;
+    top:  0px; /* Adjust this value to position the arrow correctly */
+    right: 10px; /* Adjust this value to position the arrow correctly */
+    border-left: 10px solid transparent;
+    scale: 125%;
+    z-index: 99999;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff; /* Arrow color */
+    box-shadow: 0px 0px 5px rgba(0, 0.4, 0.4, 0.4); /* Adjust values as needed */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+#sponsor:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.goback-button {
+    background-color: #ff7b00;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.project-content {
+    margin-top: 10px;
+}
+
+.project-content label{
+    display: block;
+}
+
+.description-content {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modal-content h2, .modal-content p{
+    margin-bottom: 15px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.submit-button{
+    background-color: #ff7b00;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #e87000;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cancel-button:hover {
+    background-color: #bbb;
+}
+
+.newSkillButtons {
+    margin-right: 100px;
+    margin-top: -50px;
+}
+
+.description-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.description-content textarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    resize: vertical;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.removeProjectButton {
+    display: inline-block;      
+    padding: 7px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;	
+    background: #f44336;
+    color:#fff; 
+    text-decoration: none;    
+    margin-block: 5px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.editProjectButton {
+    display: inline-block;      
+    padding: 7px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;	
+    background: linear-gradient(90deg, #f28d4f 0%, #e28246 100%);
+    color:#fff; 
+    text-decoration: none;    
+    margin-block: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.addteam-button {
+    background-color: #ff7b00;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 2px;
+    margin-left: -15px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.goback-button:hover {
+    background-color: rgb(226, 124, 0);
+}
+
+.addteam-button:hover {
+    background-color: rgb(226, 124, 0);
+}
+
+.project-info {
+    width: 750px;
+    display: inline-block;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+    list-style: none;
+}
+
+.project-profile-container {
+    padding: 10px;
+}
+
+.project-profile-card {
+    display: flex;
+    margin-left: 25px;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+
+.project-page-description {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.project-page-skills {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.project-page-skills h1{
+    font-size: 1.3em;
+}
+
+.project-page-files {
+    text-align: left;
+}
+
+.project-page-files h1{
+    font-size: 1.3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-page-description h1{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.project-page-image {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+    margin-left: -23px;
+}
+
+.project-page-team-constraints {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.project-page-team-constraints h1{
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.project-page-team-constraints h2{
+    font-weight: normal;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.project-page-team-constraints h3{
+    font-weight: normal;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.project-page-sponsor {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.project-profile-card-container {
+    flex-direction: column;
+}
+
+.teamPageStatus {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.project-page-name {
+    flex: 1;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.project-page-sponsor {
+    font-size: 1.2em;
+}
+
+.project-page-name h1{
+    font-size: 1.2em;
+}
+
+.teamPageContents {
+    width: 750px;
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.team-profile-card {
+    display: flex;
+    margin-left: 15px;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+
+.team-page-name {
+    flex: 1;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.team-page-members, .team-page-projects, .team-page-skills, .team-page-project-assigned {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.team-page-members h1, .team-page-projects h1, .team-page-skills h1, .team-page-project-assigned h1 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.team-page-members p, .team-page-projects p, .team-page-skills p, .team-page-project-assigned p {
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.team-page-description {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.team-page-description h1 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.team-page-image {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+    margin-left: -13px;
+}
+
+.page-profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.team-page-sponsor {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 1.4em;
+}
+
+.team-profile-card-container {
+    flex-direction: column;
+}
+
+.team-page-name h1 {
+    font-size: 1.4em;
+}
+
+#sponsor {
+    width: 150px;
+    height: 30px;
+    background-image: url(/images/sponsor_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-left: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    color: transparent;
+    transition: transform 0.3s ease;
+}
+
+#sponsor option {
+    color: black;
+}
+
+.inline-list > ul > li:after {
+    content: ", ";
+}
+
+.inline-list.bar-sep > ul > li:after {
+    content: " | ";
+}
+
+#sponsorDropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.skill-bubble {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 20px; 
+    background-color: #007bff;
+    color: #ffffff;
+    font-family: Arial, sans-serif; 
+    font-size: 17px; 
+    line-height: 1.5; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.select-box {
+    position: relative;
+}
+
+.selected-item {
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.options-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+}
+
+.options-container label {
+    display: block;
+    padding: 5px;
+}
+
+.options-container label:hover {
+    background-color: #f4f4f4;
+}
+
+.options-container label input[type="checkbox"] {
+    display: none;
+}
+
+.options-container label input[type="checkbox"]+span {
+    position: relative;
+}
+
+.options-container label input[type="checkbox"]:checked+span:after {
+    content: '\2713';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.invite-actions {
+    display: flex;
+}
+
+.invite-actions > form {
+    margin-right: 0.3em;
+}
+
+
+.listBody {
+    list-style-type: none;
+}
+
+.resumeUploadSection,
+.submitButton{
+    padding: 10px;
+}
+
+.contactRow{
+    padding: 5px;
+}
+
+.contactRow label{
+    display: block;
+    margin-right: 10px;    
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+  }
+
+input[type="submit"]{
+    font-size: 16px;
+    width: 100px;
+    cursor: pointer;
+ }
+
+.adminLinksList,
+.adminPage p{
+    padding: 5px;
+} 
+
+.adminBox{
+    display:flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.teamCard{
+    width: 400px;
+    height: 450px;
+    background: #fff;
+    border-radius: 15px;
+    color: #333;
+    margin: 10px;
+    padding-top: 10px;      
+}
+
+.teamCard h2,
+.teamCard p,
+.projSubmitButton{
+    padding: 5px;    
+}
+
+.adminTeamPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teamMembers{
+    padding: 3px;        
+    text-align: left;
+    margin-left: 120px;        
+}
+
+.teamMembers>form, .teamMembers>p {
+    display: inline;
+}
+
+.deleteMember {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none; 
+    padding: 2px 7px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 1.5em !important;
+}
+
+.deleteMember:hover, 
+.deleteTeam:hover{
+    background-color: #cc0000; 
+}
+
+.deleteTeam {
+    background-color: #ff0000;
+    color: #ffffff; 
+    border: none; 
+    padding: 5px 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin: 10px;
+
+}
+/* teamPage.ejs */
+
+.teamPageContents {
+    display: flex;
+    justify-content: center;
+}
+
+.teamNumheader {
+    width: 200px;
+    display: inline-block;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #000;
+}
+
+.teamMembersList{
+    width: 400px;
+    display: inline-block;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #000;
+}
+
+.teamProjectPrefsList{
+    width: 400px;
+    display: inline-block;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #000;
+}
+
+.teamSkills{
+    width: 400px;
+    display: inline-block;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #000;
+}
+
+.adminEditButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.removeProject{
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+.genCard {
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #ebebeb;
+    padding: 1em;
+    list-style-type: none;
+    line-height: 1.8em;
+}
+
+#saveAllTeams{
+    width: 130px;
+}
+
+#save-item{
+    padding-top: 2px;    
+}
+
+.upload-area-title{
+    text-align: left;
+    margin-top: -20px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.uploadlabel{
+    width: 100%;
+    min-height: 100px;
+    background:rgb(239, 239, 239);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed rgb(220, 220, 220);
+    margin-top: -10px;
+}
+
+.uploadlabel span{
+    font-size: 70px;
+    color: #000;
+}
+
+.uploaded {
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #a5a5a5;
+}
+
+.upload-img {
+    width: 25px;
+    height: 25px;
+}
+
+.showfilebox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+    padding: 10px 15px;
+    box-shadow: #0000000d 0px 0px 0px 1px, #d1d5db3d 0px 0px 0px 1px inset;
+}
+
+.filewrapper h3{
+    margin-bottom: -20px;
+    margin-top: -10px;
+}
+
+.left h3{
+    font-weight: normal;
+    font-size: 15px;
+    color: #292F42;
+    margin: 0;
+}
+
+.right span{
+    color: #ff0000;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.invite-card{
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;    
+}
+
+.invite-card h1,
+.invite-card p{
+    padding: 5px;
+}
+
+.invite-card div{
+    padding: 10px;
+}
+
+select#id{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+textarea#message{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 240px;
+    height: 100px;
+}
+
+.teamOption{
+    display: none;
+}
+
+#studentInviteLabel{
+    padding-right: 10px;
+}
+
+.upload-area-title{
+    text-align: left;
+    margin-top: -20px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.uploadlabel{
+    width: 100%;
+    min-height: 100px;
+    background:rgb(239, 239, 239);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed rgb(220, 220, 220);
+    margin-top: -10px;
+}
+
+.uploadlabel span{
+    font-size: 70px;
+    color: #000;
+}
+
+.uploaded {
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #a5a5a5;
+}
+
+.upload-img {
+    width: 25px;
+    height: 25px;
+}
+
+.genProfile {
+    text-decoration: none; /* Remove default underline */
+    font-weight: bold; /* Apply bold font weight */
+    color: inherit; /* Inherit the text color from the parent */
+}
+
+.profile-image-modal {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;     
+}
+
+.new-profile-pic-modal {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;     
+}
+
+.upload-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#new-profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.upload-picture-new {
+    display: none;
+}
+
+.upload-picture-new input[file]{
+    display: none;
+}
+
+select#newMember{
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #a8a6a6;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+select#assignProject{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+}

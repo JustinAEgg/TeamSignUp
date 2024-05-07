@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/doc-head.ejs", {title: "Clear Profile"}); %>
+<body>
+
+<%- include('partials/header.ejs'); %>
+
+<div class="function-container">
+    <div class="function-item">
+        <button class="goback-button" onclick="goBack()">Previous Page</button>
+    </div>
+</div>
+
+<main class="adminPage">
+    <h1>Clear User Profile</h1>
+    <p>Enter a user's email to clear all public information associated with their profile.</p>
+    <form onsubmit="return confirmMessage()" method = "POST">    
+        <label for="clearProfile"></label>
+        <input type="text" name="clearProfile" id="clearProfile" />
+        <div class=submitButton>
+            <input type="submit" value="Clear Profile!" />
+        </div>
+    </form>
+</main>   
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+    
+    function confirmMessage() {    
+        var userEmail = document.getElementById("clearProfile").value;    
+        if (userEmail.trim() === "") {
+            alert("No email has been entered.");
+            return false;
+        }
+        else {
+            var message = "Are you sure you want to clear this user\'s profile? \nThis action cannot be undone.";
+            return confirm(message);
+        }    
+    }  
+</script>
+
+</body>
+</html>

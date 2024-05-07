@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<%- include("partials/doc-head.ejs", {title: "Project List" }); %>
+
+    <body>
+        <%- include('partials/header.ejs'); %>
+
+            <div class="function-container">
+                <div class="function-item">
+                    <input type="text" id="searchInput" placeholder="Search projects" onkeyup="filterProjects()">
+                </div>
+                <div class="function-item" id="sponsorDropdown">
+                    <label for="sponsor"></label>
+                    <select id="sponsor" onchange="filterProjects()">
+                        <option value=""></option>
+                        <% sponsors.forEach(sponsor => { %>
+                            <option value="<%= sponsor.affiliation %>"><%= sponsor.affiliation %></option>
+                        <% }); %>
+                    </select>
+                </div>
+                <div class="your-project">
+                    <%- include('partials/current-project.ejs'); %>
+                </div>
+            </div>
+
+            <main>
+                <article>
+                    <ul class="profile-list" id="projectList">
+                        <% projects.forEach(project=> { %>
+                            <li class="profile-item" style="display: block;">
+                                <a href="/project/<%= project.projectID %>">
+                                    <div class="profile-image-box">
+                                        <img class="profile-image" src="/images/<%= project.avatar %>" />
+                                    </div>
+                                    <div class="profile-box">
+                                        <h2 class="project-name">
+                                            <%= project.projectname %>
+                                                <% if (yourProjectID && project.projectID==yourProjectID.projectID) { %>
+                                                    <span class="your-project-indicator">Your Project</span>
+                                                <% } %>
+                                        </h2>
+                                        <div class="project-sponsor">
+                                            <%= project.affiliation %>
+                                        </div>
+                                        <div class="project-description">
+                                            <%= project.description %>
+                                        </div>
+                                        <div class="project-skills inline-list">
+                                            <%- include("partials/labeled-list.ejs", { label: "Skills needed" , list:
+                                                project.skills || []}); %>
+                                        </div>
+                                        <div class="project-status-box">
+                                            <p>
+
+                                                <script>
+                                                    console.log("<%= project.team_assigned %>");
+                                                </script>
+                                                Project Status:
+                                                <% if (!project.team_assigned) { %>
+                                                    <span class="project-status-open">Open</span>
+                                                <% } else { %>
+                                                    <span class="project-status-closed">Closed</span>
+                                                <% } %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </article>
+            </main>
+
+            <script>
+                function filterProjects() {
+                    var input, filter, ul, li, a, txtValue, sponsorSelect, selectedSponsor;
+                    input = document.getElementById('searchInput');
+                    filter = input.value.toUpperCase();
+                    sponsorSelect = document.getElementById("sponsor");
+                    selectedSponsor = sponsorSelect.value.toUpperCase();
+
+                    ul = document.getElementById("projectList");
+                    li = ul.getElementsByClassName('profile-item');
+            
+                    for (var i = 0; i < li.length; i++) {
+                        var projectNameElement = li[i].querySelector(".project-name");
+                        var projectSponsorElement = li[i].querySelector(".project-sponsor");
+                        if (!projectNameElement || !projectSponsorElement) {
+                            console.error("Error: Project name or sponsor element not found for project item", li[i]);
+                            continue;
+                        }
+                        var projectName = projectNameElement.textContent.trim();
+                        var projectSponsor = projectSponsorElement.textContent.trim().toUpperCase();
+
+                        if ((projectName.toUpperCase().indexOf(filter) > -1 || filter === '') && (selectedSponsor === '' || projectSponsor === selectedSponsor)) {
+                            li[i].style.display = "block";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
+    </body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/doc-head.ejs", {title: "Set Project Preferences" }); %>
+
+    <body>
+        <%- include('partials/header.ejs'); %>
+
+            <main>
+                <form method="post" class="pref-form" onsubmit="prefFormLog()">
+                    <div class="projectPrefs">
+                        <h3>Enter your top 5 project preferences:</h3>
+                        <% for (let i=0; i < 5; i++) { %>
+                            <div class="formField">
+                                <label for="preference<%= i+1 %>">Preference #<%= i+1 %>:</label>
+                                <select name="preference<%= i+1 %>" id="preference<%= i+1 %>" required>
+                                    <% for (let j=0; j < projects.length; j++) { %>
+                                        <option value="<%= projects[j].projectID %>">
+                                            <%= projects[j].projectname %>
+                                        </option>
+                                        <% } %>
+                                </select>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="prefSubmitButton">
+                        <input type="submit" value="Submit" />
+                    </div>
+                </form>
+            </main>
+            <script src="/main.js"></script>
+    </body>
+
+</html>

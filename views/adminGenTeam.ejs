@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/doc-head.ejs", {title: "Team Formation" }); %>
+
+    <body>
+
+        <%- include('partials/header.ejs'); %>
+
+            <div class="function-container">
+                <a href="/adminHomepage">
+                    <div class="function-item">
+                        <button class="goback-button">Previous Page</button>
+                    </div>
+                </a>
+                <div class="function-item">
+                    <form action="/admin/generate-teams" method="get">
+                        <label for="maxTeam">Max Team Size</label>
+                        <input type="text" name="maxTeam" id="maxTeam" />
+                        <input type="submit" value="Regenerate" />
+                    </form>
+                </div>
+
+                <div class="function-item" id="save-item">
+                    <form id="saveTeamsForm" action="/admin/save-teams" method="post">
+                        <% for (let i=0; i < genTeams.length; i++) { %>
+                            <% const team={ teamID: genTeams[i].teamID, newMemberIDs: [] }; %>
+
+                                <input type="hidden" name="teams[<%= i %>][id]" value="<%= team.teamID %>">
+
+                                <% for (let j=0; j < (genTeams[i].newMembers).length; j++) { %>
+                                    <% team.newMemberIDs.push(genTeams[i].newMembers[j].id); %>
+                                        <input type="hidden" name="teams[<%= i %>][newMemberIDs][<%= j %>]"
+                                            value="<%= team.newMemberIDs[j] %>">
+                                        <% } %>
+                                            <% } %>
+                                                <input id="saveAllTeams" type="submit" value="Save All Teams" />
+                    </form>
+                </div>
+            </div>
+
+            <main class="adminPage">
+
+                <article>
+                    <ul class="profile-list" id="projectList">
+                        <% for (let i=0; i < genTeams.length; i++) { %>
+                            <li class="profile-item" style="display: block;">
+                                <div class="genCard">
+                                    <h1>New Team</h1>
+
+                                    <p>Members:
+                                        <% if(genTeams[i].currentMembers.length> 0) { %>
+                                            <% for (let j=0; j < (genTeams[i].currentMembers).length; j++) { %>
+                                                <a class="genProfile"
+                                                    href="/users/<%= genTeams[i].currentMembers[j].id %>"
+                                                    target="_blank">
+                                                    <%= genTeams[i].currentMembers[j].name %>
+                                                </a>,
+                                                <% } %>
+                                                    <% } %>
+
+                                                        <% for (let j=0; j < genTeams[i].newMembers.length; j++) { %>
+                                                            <% if(j !=(genTeams[i].newMembers.length)-1) { %>
+                                                                <a class="genProfile"
+                                                                    href="/users/<%= genTeams[i].newMembers[j].id %>"
+                                                                    target="_blank">
+                                                                    <%= (genTeams[i].newMembers[j].name) %>
+                                                                </a>,
+                                                                <% } else { %>
+                                                                    <a class="genProfile"
+                                                                        href="/users/<%= genTeams[i].newMembers[j].id %>"
+                                                                        target="_blank">
+                                                                        <%= (genTeams[i].newMembers[j].name) %>
+                                                                    </a>
+                                                                    <% } %>
+                                                                        <% } %>
+                                    </p>
+
+                                    <p>Project Preferences:
+                                        <% if(genTeams[i].projectPreferences.length===0) { %>
+                                            N/A
+                                            <% } else { %>
+                                                <%= genTeams[i].projectPreferences.join(', ') %>
+                            <% } %>
+                        </p>
+
+                        <p>Skills:  
+                            <% if((genTeams[i].currentSkills).length === 0 && (genTeams[i].newSkills).length === 0) { %>
+                                N/A
+                            <% } else { %>
+                                <% if((genTeams[i].currentSkills).length > 0) { %>
+                                    <% if((genTeams[i].newSkills).length > 0) { %>                                        
+                                        <%= genTeams[i].currentSkills.join(' , ') %>,
+                                        <%= genTeams[i].newSkills.join(' , ') %>
+                                    <% } else { %>
+                                        <%= genTeams[i].currentSkills.join(' , ') %>
+                                        <%= genTeams[i].newSkills.join(' , ') %>
+                                    <% }%>     
+                                <% } else { %>
+                                    <%= genTeams[i].newSkills.join(' , ') %>
+                                <% } %>
+                            <% } %>
+                        </p>
+
+                        <form action="/admin/save-teams" method="post">                            
+                            <% const teams = {
+                                teamID: genTeams[i].teamID,
+                                newMemberIDs: []
+                            }; %>
+            
+                            <input type="hidden" name="teams[0][id]" value="<%= teams.teamID %>">                                    
+                        
+                            <% for (let j = 0; j < genTeams[i].newMembers.length; j++) { %>
+                                <% teams.newMemberIDs.push(genTeams[i].newMembers[j].id); %>
+                                <input type="hidden" name="teams[0][newMemberIDs][<%= j %>]" value="<%= teams.newMemberIDs[j] %>">                    
+                            <% } %>                                                            
+                            <input id="saveTeam<%= i %>" type="submit" value="Save Team" />
+                        </form>
+                    </div>                      
+                </li>          
+            <% } %>
+        </ul>
+    </article>                  
+</main>
+
+</body>
+</html>

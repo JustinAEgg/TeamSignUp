@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/doc-head.ejs", {title: "Manage User Access" }); %>
+
+    <body>
+
+        <%- include('partials/header.ejs'); %>
+
+        <div class="function-container">
+            <div class="function-item">
+                <button class="goback-button" onclick="goBack()">Previous Page</button>
+            </div>
+        </div>
+
+            <main class=adminPage>
+                <h1>Manage User Access</h1>
+                <p>To give access to a new user, please enter their name and email address: </p>
+                <form action="/admin/adminAccess" method="POST" onsubmit="return confirmMessage()">
+                    <div class="contactRow">
+                        <label for="firstNameInput">First Name</label>
+                        <input type="text" name="firstNameInput" id="firstNameInput" />
+                    </div>
+
+                    <div class="contactRow">
+                        <label for="middleNameInput">Middle Name</label>
+                        <input type="text" name="middleNameInput" id="middleNameInput" />
+                    </div>
+
+                    <div class="contactRow">
+                        <label forst="lastNameInput">Last Name</label>
+                        <input type="text" name="lastNameInput" id="lastNameInput" />
+                    </div>
+
+                    <div class="contactRow">
+                        <label for="emailInput"> Email</label>
+                        <input type="text" name="emailInput" id="emailInput" />
+                    </div>
+
+                    <div class="contactRow">
+                        <label for="netIdInput">Net ID</label>
+                        <input type="text" name="netIdInput" id="netIdInput" />
+                    </div>
+                    
+                    <div class="adminBox">
+                        <input type="checkbox" id="adminPriv" name="adminPriv">
+                        <label for="adminPriv">Admin Privileges</label>
+                    </div>
+
+                    <div class="submitButton">
+                        <input type="submit" value="Grant Access" />
+                    </div>
+                </form>
+            </main>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function confirmMessage() {    
+            var newEmail = document.getElementById("emailInput").value;
+            var firstName = document.getElementById("firstNameInput").value;    
+            var lastName = document.getElementById("lastNameInput").value;                      
+            
+            if (firstName.trim() === "") {
+                alert("No first name has been entered.");
+                return false;
+            }
+            else if (lastName.trim() === ""){
+                alert("No last name has been entered.")
+                return false;
+            }
+            else if (newEmail.trim() === ""){
+                alert("No email has been entered.");
+                return false;
+            }
+            else {
+                var message = firstName +" " + lastName + " has been given access. \nTheir email can now be used to register a new account.";
+                return alert(message);
+            }    
+        }
+    </script>
+
+    </body>
+
+</html>

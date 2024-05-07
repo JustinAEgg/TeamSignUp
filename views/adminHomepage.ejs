@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/doc-head.ejs", {title: "Admin Home Page"}); %>
+<body>
+
+<%- include('partials/header.ejs'); %>
+    
+<main>
+    <h1>Administrator Controls</h1>
+    <div class="adminLinksList">
+        <ul class="listBody">
+            <li class=setting-links><a href="/adminAccess">Add New User</a></li>                
+            <li class=setting-links><a href="/adminProjects">Manage Projects</a></li>        
+            <li class=setting-links><a href="/adminTeams">Manage Teams</a></li>
+            <li class=setting-links><a href="/adminFormTeam">Form New Teams</a></li>                        
+            <li class=setting-links><a href="/adminClearProfile">Clear User Profile</a></li>
+            <li class=setting-links><a href="/adminDatabase">Manage Database</a></li>
+        </ul>
+    </div>
+</main>
+
+</body>
+</html>

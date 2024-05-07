@@ -1,0 +1,10 @@
+<p class="current-project">
+    Your Project:
+    <% if (yourProjectID===null) { %>
+        No project assigned
+        <% } else { %>
+            <a class="project" href="/project/<%= yourProjectID[0].projectID %>">
+                <%= yourProjectID[0].projectName %>
+            </a>
+            <% } %>
+</p>

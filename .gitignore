@@ -1,0 +1,13 @@
+# Node
+node_modules/
+
+# Editor configuration
+.vscode/
+.vs/
+
+# OS files
+.DS_Store
+._*
+
+# environment variables
+.env

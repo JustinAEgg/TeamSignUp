@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/doc-head.ejs", {title: "Team Formation" }); %>
+
+    <body>
+
+        <%- include('partials/header.ejs'); %>
+
+            <div class="function-container">
+                <div class="function-item">
+                    <button class="goback-button" onclick="goBack()">Previous Page</button>
+                </div>
+            </div>
+
+            <main class="adminPage">
+                <h1>Team Formation by Preference</h1>
+                <form action="/admin/generate-teams" method="get">
+                    <label for="maxTeam">Max Team Size</label>
+                    <input type="text" name="maxTeam" id="maxTeam" />
+                    <div class="submitButton">
+                        <input type="submit" value="Generate" />
+                    </div>
+                </form>
+            </main>
+
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
+
+    </body>
+
+</html>
