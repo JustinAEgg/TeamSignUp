@@ -49,7 +49,7 @@ Screenshot provided for where to look.
 |-----------------|-------------------------------------------------------|
 | ADMIN_PASSWORD  | The password for the initial admin account in the database. The email is admin@example.com. |
 
-
+## To Run
 1. Create a .env file with the following variables in the table above.
 
 2. Run: node main
