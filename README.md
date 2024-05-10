@@ -17,8 +17,12 @@
 - mySQL
 
 <h2> Screenshots </h2>
-Screenshots of some the main pages:
-![Screenshot 2024-05-07 060519](https://github.com/JustinAEgg/TeamSignUp/assets/116119742/224c3f17-1a4a-4c56-a221-00ed0ee9587e)
+![Screenshot 2024-05-07 060506](https://github.com/JustinAEgg/TeamSignUp/assets/116119742/e2d0b5bb-0f08-4d11-8b42-b3f651810a92)
+![Screenshot 2024-05-07 060638](https://github.com/JustinAEgg/TeamSignUp/assets/116119742/257fb4d1-1e88-4f40-9374-40f7be1ad615)
+![Screenshot 2024-05-07 063524](https://github.com/JustinAEgg/TeamSignUp/assets/116119742/145ccc29-7621-40a0-b9fd-9935e7e6f96f)
+![Screenshot 2024-05-07 063547](https://github.com/JustinAEgg/TeamSignUp/assets/116119742/43d1bb79-10ba-4f43-a7d2-cc0204c47907)
+![Screenshot 2024-05-07 063627](https://github.com/JustinAEgg/TeamSignUp/assets/116119742/20642ae4-13d4-43b2-b486-6670bd28f85b)
+
 
 
 
